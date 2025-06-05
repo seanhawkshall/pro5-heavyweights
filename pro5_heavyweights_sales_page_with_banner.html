@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pro 5 Heavyweights - T-Shirts for Sale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #222;
+        }
+        img.banner {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1, p.tagline {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 5px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #0070ba;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005ea6;
+        }
+        .payment-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            font-size: 16px;
+        }
+        .payment-info strong {
+            color: #0070ba;
+        }
+    </style>
+</head>
+<body>
+    <img class="banner" src="A_website_banner_image_showcases_the_sale_of_Pro_5.png" alt="Pro 5 Banner">
+    <h1>Pro 5 Heavyweights</h1>
+    <p class="tagline">Authentic heavyweight tees with unbeatable style.</p>
+
+    <label for="size">Choose your size:</label>
+    <select id="size" name="size">
+        <option value="" disabled selected>Select size</option>
+        <option value="S">Small (S)</option>
+        <option value="M">Medium (M)</option>
+        <option value="L">Large (L)</option>
+        <option value="XL">Extra Large (XL)</option>
+        <option value="2XL">2X Large (2XL)</option>
+    </select>
+
+    <button onclick="showPaymentInfo()">Buy for $20</button>
+
+    <div id="payment" class="payment-info" style="display:none;">
+        <p><strong>Pay with Cash App:</strong> Send $20 + your chosen size to <br><code>$alfredseancashme</code></p>
+        <p><strong>Or Pay with PayPal:</strong> Send $20 + your chosen size to <br><code>seanjennings84@yahoo.com</code></p>
+        <p>After payment, please DM or text your size and payment confirmation to complete your order.</p>
+    </div>
+
+    <script>
+        function showPaymentInfo() {
+            const sizeSelect = document.getElementById('size');
+            if (!sizeSelect.value) {
+                alert('Please select a size before proceeding.');
+                return;
+            }
+            document.getElementById('payment').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
